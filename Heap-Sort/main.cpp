@@ -11,20 +11,15 @@
 #include <vector>
 #include <algorithm>
 
+#define Left(index) ((index) * 2 + 1)
+#define Right(index) ((index) * 2 + 2)
+
 using namespace std;
 
 void Swap(int& a,int& b) {
     int temp = a;
     a = b;
     b = temp;
-}
-
-unsigned long Left(unsigned long index) {
-    return index * 2 + 1;
-}
-
-unsigned long Right(unsigned long index) {
-    return index * 2 + 2;
 }
 
 void MaxHeapify(vector<int>& vec,unsigned long index) {
